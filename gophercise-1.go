@@ -57,7 +57,7 @@ problemloop:
 			fmt.Scanln("%s\n", &tmp) // to clear the buffer
 			break
 		case answer := <-answerCh:
-			if answer == p.a {
+			if strings.TrimSpace(answer) == p.a {
 				correct++
 			} else {
 				fmt.Println("[error] input : [" + answer + "]")
